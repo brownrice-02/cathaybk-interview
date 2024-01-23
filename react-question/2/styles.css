@@ -1,0 +1,29 @@
+.container {
+    font-size: 14px;
+}
+.container .header {
+    font-size: 18px;
+}
+.container .shop-list {
+    list-style: none;
+    margin-left: -15px;
+}
+.container .shop-list:first-child .item {
+    color: green;
+}
+.container .shop-list .item {
+    /* Explain why does this color not works, and how to fix make it work on
+    1st list 
+    
+    藍色沒生效的原因是因為 css 的優先權，.container .shop-list li.item 優先於
+     .container .shop-list .item。
+    要解決這個問題，可以使用 .container .shop-list:first-child .item 來僅選
+    擇第一個 .shop-list 下的 .item 元素，然後為其設置綠色。
+    
+    */
+    color: blue;
+}
+/* Write styling make every other line give background color to next one */
+.container .shop-list li:nth-child(odd) {
+    background-color: gray;
+}
